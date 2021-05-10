@@ -1,0 +1,4 @@
+{
+"baseUrl": "https://paczkadoukrainy.pl/",
+"testFiles": "**/*.feature"
+}

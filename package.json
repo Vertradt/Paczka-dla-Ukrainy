@@ -1,0 +1,26 @@
+{
+  "name": "administacja",
+  "version": "1.0.0",
+  "author": "pawel kozka",
+  "description": "adm e2e tests",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^6.1.0",
+    "cypress-parallel": "^0.3.0"
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.1.0",
+    "cypress-select-tests": "^1.7.0"
+  },
+  "scripts": {
+    "tests": "cypress open",
+    "cypress:open": "cypress open",
+    "test": "npx cypress open",
+    "test:ci": "npx cypress run --spec **/*.features",
+    "test:tags": "npx cypress-tags run -e TAGS=$TAGS",
+    "cy:parallel": "cypress-parallel -s tests -t 2 -d -a '\"--config baseUrl=http://localhost:3000\"'"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
